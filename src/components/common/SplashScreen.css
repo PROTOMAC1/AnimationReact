@@ -1,0 +1,151 @@
+@keyframes splashTextZoomOut {
+  0% {
+    transform: translate(-50%, -50%) scale(100);
+    opacity: 1;
+  }
+
+  60% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes splashTextZoomIn {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+
+  60% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: translate(-50%, -50%) scale(90);
+    opacity: 1;
+  }
+}
+
+@keyframes splashTextMoveUp {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  60% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: translate(-50%, -310px) scale(1);
+  }
+}
+
+@keyframes splashSideInLeft {
+  0% {
+    transform: translateX(-100vw);
+    opacity: 0;
+  }
+
+  10% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes splashSideInRight {
+  0% {
+    transform: translateX(100vw);
+    opacity: 0;
+  }
+
+  10% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.splash-text {
+  animation:
+    splashTextZoomOut 2.8s cubic-bezier(0.22,1,0.36,1) forwards,
+    splashTextMoveUp 1.4s 2.4s cubic-bezier(0.22,1,0.36,1) forwards;
+}
+
+.splash-text.zoom-in {
+  animation: splashTextZoomIn 1.8s cubic-bezier(0.22,1,0.36,1) forwards;
+}
+
+.splash-left img {
+  animation: splashSideInLeft 5s 3.2s cubic-bezier(0.22,1,0.36,1) forwards;
+}
+
+.splash-right img {
+  animation: splashSideInRight 5s 3.2s cubic-bezier(0.22,1,0.36,1) forwards;
+}
+
+.splash-container {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: linear-gradient(to bottom, #c00a3a, #890025);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.splash-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: auto;
+  width: auto;
+  max-height: 100px;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  user-select: none;
+  pointer-events: none;
+}
+
+.splash-left,
+.splash-right {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 50%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+.splash-left {
+  left: 0;
+  justify-content: flex-end;
+}
+
+.splash-right {
+  right: 0;
+  justify-content: flex-start;
+}
+
+.splash-left img,
+.splash-right img {
+  height: auto;
+  max-height: 100vh;
+  width: 100%;
+  object-fit: cover;
+  pointer-events: none;
+  user-select: none;
+  opacity: 0;
+}
