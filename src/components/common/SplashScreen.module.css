@@ -76,25 +76,25 @@
   }
 }
 
-.splash-text {
+.splashText {
   animation:
-    splashTextZoomOut 2.8s cubic-bezier(0.22,1,0.36,1) forwards,
-    splashTextMoveUp 1.4s 2.4s cubic-bezier(0.22,1,0.36,1) forwards;
+    splashTextZoomOut 2.8s cubic-bezier(0.22, 1, 0.36, 1) forwards,
+    splashTextMoveUp 1.4s 2.4s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 
-.splash-text.zoom-in {
-  animation: splashTextZoomIn 1.8s cubic-bezier(0.22,1,0.36,1) forwards;
+.zoomIn {
+  animation: splashTextZoomIn 1.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 
-.splash-left img {
-  animation: splashSideInLeft 5s 3.2s cubic-bezier(0.22,1,0.36,1) forwards;
+.splashLeft img {
+  animation: splashSideInLeft 5s 3.2s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 
-.splash-right img {
-  animation: splashSideInRight 5s 3.2s cubic-bezier(0.22,1,0.36,1) forwards;
+.splashRight img {
+  animation: splashSideInRight 5s 3.2s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 
-.splash-container {
+.splashContainer {
   position: fixed;
   inset: 0;
   z-index: 9999;
@@ -105,7 +105,7 @@
   justify-content: center;
 }
 
-.splash-text {
+.splashText {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -118,8 +118,8 @@
   pointer-events: none;
 }
 
-.splash-left,
-.splash-right {
+.splashLeft,
+.splashRight {
   position: absolute;
   top: 0;
   height: 100%;
@@ -129,18 +129,18 @@
   align-items: center;
 }
 
-.splash-left {
+.splashLeft {
   left: 0;
   justify-content: flex-end;
 }
 
-.splash-right {
+.splashRight {
   right: 0;
   justify-content: flex-start;
 }
 
-.splash-left img,
-.splash-right img {
+.splashLeft img,
+.splashRight img {
   height: auto;
   max-height: 100vh;
   width: 100%;
