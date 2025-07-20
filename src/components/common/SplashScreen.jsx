@@ -1,6 +1,6 @@
 // eslint-disable-next-line
 import { useEffect, useState } from "react";
-import "./SplashScreen.css";
+import Animationstyle from "./SplashScreen.module.css";
 import textImg from "../../assets/animations/text.png";
 import leftImg from "../../assets/animations/leftslide.png";
 import rightImg from "../../assets/animations/rightslide.png";
@@ -29,20 +29,20 @@ const SplashScreen = ({ onFinish }) => {
   if (hideSplash) return null;
 
   return (
-    <div className="splash-container">
-      <img
-        src={textImg}
-        alt="Text"
-        className={`splash-text${zoomIn ? " zoom-in" : ""}`}
-        draggable={false}
-      />
-      <div className="splash-left">
-        <img src={leftImg} alt="Left Slide" draggable={false} />
-      </div>
-      <div className="splash-right">
-        <img src={rightImg} alt="Right Slide" draggable={false} />
-      </div>
-    </div>
+    <div className={Animationstyle.splashContainer}>
+  <img
+    src={textImg}
+    alt="Text"
+    className={`${Animationstyle.splashText} ${zoomIn ? Animationstyle.zoomIn : ""}`}
+    draggable={false}
+  />
+  <div className={Animationstyle.splashLeft}>
+    <img src={leftImg} alt="Left Slide" draggable={false} />
+  </div>
+  <div className={Animationstyle.splashRight}>
+    <img src={rightImg} alt="Right Slide" draggable={false} />
+  </div>
+</div>
   );
 };
 
